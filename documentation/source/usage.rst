@@ -15,12 +15,12 @@ It's easy to install ``so``. However, the way to install it depends on your OS.
    Assuming that you have `Python
    <https://python.org>`_ (3.6 or newer required due to F-strings), including PyInstaller and everything in
    `the SO CLI requirements.txt
-   <https://github.com/Tyler887/so/blob/main/requirements.txt>`_, you can install ``so``
+   <https://github.com/TylerMS887/so/blob/main/requirements.txt>`_, you can install ``so``
    by using this command (works for and executes BASH):
 
    .. code-block:: shell
 
-      bash -c "$(curl -fsSL https://raw.githubusercontent.com/Tyler887/so/main/install.sh)"
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/TylerMS887/so/main/install.sh)"
 
    This command may install Python if it is missing.
    
@@ -35,7 +35,7 @@ It's easy to install ``so``. However, the way to install it depends on your OS.
    
    .. code-block:: powershell
       
-      Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/so/raw/main/install.ps1')
+      Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/TylerMS887/so/raw/main/install.ps1')
 
 .. tab:: Other (unsupported)
    
