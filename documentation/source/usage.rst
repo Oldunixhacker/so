@@ -61,11 +61,11 @@ It's easy to install ``so``. However, the way to install it depends on your OS.
         py -m pip install pyinstaller
         py -m PyInstaller --console --noupx --name so .\StackOverflowCommandLine.py
      
-   .. note::
-      ReactOS still produces old versions of software, including Python 3. Python
-      3.4 is the latest version on the ReactOS app store. This version is out of
-      date, no longer supported by the PSF, and also cannot run the code used by
-      ``so``. You may need to build a current version of Python.
+     .. note::
+        ReactOS still produces old versions of software, including Python 3. Python
+        3.4 (2014) is the latest version on the ReactOS app store. This version is out of
+        date, no longer supported by the PSF, and also cannot run the code used by
+        ``so``. You may need to build a current version of Python.
 
 :octicon:`play` Using it
 --------
