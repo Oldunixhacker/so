@@ -26,6 +26,6 @@ The Stack Overflow CLI is a free and open-source command-line for StackOverflow.
 
         ``so`` is compatible with popular platforms including Windows, macOS, and Linux.
     
-    -- grid-item-card::  Open-source
+    .. grid-item-card::  Open-source
        
        ``so`` is available for free and the source code is available on GitHub under thr MIT license.
