@@ -1,7 +1,3 @@
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
 .. tip::
    
    This document can also be viewed using ``so help howto``.
@@ -14,16 +10,12 @@ This is a tutorial about how to use the SO CLI.
 ----------------------------
 It's easy to install ``so``. However, the way to install it depends on your OS.
 
-.. tab:: macOS, BSD and GNU/Linux
-   
-   .. warning::
-      
-      Stack Overflow CLI is not tested on macOS or BSD descendants, only on GNU/Linux and Windows.
+.. tab:: Linux/macOS/BSD
    
    Assuming that you have `Python
    <https://python.org>`_ (3.6 or newer required due to F-strings), including PyInstaller and everything in
    `the SO CLI requirements.txt
-   <https://github.com/Tyler887/so/blob/main/requirements.txt>`_, you **can** install ``so``
+   <https://github.com/Tyler887/so/blob/main/requirements.txt>`_, you can install ``so``
    by using this command (works for and executes BASH):
 
    .. code-block:: shell
@@ -36,26 +28,22 @@ It's easy to install ``so``. However, the way to install it depends on your OS.
    from `Stack Apps
    <https://stackapps.com/questions/9375/placeholder-stackoverflow-cli>`_.
 
-.. tab:: Microsoft Windows
+.. tab:: Windows
    
-   .. note::
-      
-      SO CLI is not yet avaliable via Windows Package Manager. If popularity grows, I'll submit
-      SO CLI to the Microsoft WinGet community repository for review when the project
-      is ready to be avaliable to the public.
-   
-   To install ``so``, launch PowerShell (recommended Windows Powershell 5.1 or
+   To install ``so``, launch PowerShell (recommended Windows PowerShell 5.1 or
    PowerShell 7) and run:
    
    .. code-block:: powershell
       
       Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/so/raw/main/install.ps1')
 
-.. tab:: Other
+.. tab:: Other (unsupported)
    
-   If you do not use any listed OS, make sure `support for Python on that OS is avaliable
-   <https://pythondev.readthedocs.io/platforms.html>`_. This is because your OS will **not**
-   have any Python binaries if it is not supported.
+   .. warning::
+     Make sure `compatibility for Python on your OS is available
+     <https://pythondev.readthedocs.io/platforms.html>`_. ``so`` will not work otherwise.
+     
+     Support is not available for non-major platforms. Please do not report issues.
    
    To compile, use PyInstaller:
    
@@ -66,7 +54,7 @@ It's easy to install ``so``. However, the way to install it depends on your OS.
         pip3 install pyinstaller
         python -m PyInstaller --console --noupx --name so ./StackOverflowCommandLine.py
    
-   .. tab:: Windows-like
+   .. tab:: ReactOS (NT-like)
      
      .. code-block:: powershell
         
@@ -76,27 +64,8 @@ It's easy to install ``so``. However, the way to install it depends on your OS.
 :octicon:`play` Using it
 --------
 .. admonition:: Todo
-
-  The SO CLI uses the Stack Exchange API, which requires you to approve
-  the SO CLI when you try to use it.
-
-  If you run SO CLI without authenticating to the API, this error
-  will appear:
-  
-  .. error::
-  
-    .. code-block::
    
-       (x) Error: Please authenticate to the API using: so login
-           The Stack Overflow CLI uses the Stack Exchange API, so you need
-           to login to use the SO CLI.
-       
-           If you do not have a Stack Overflow account, you can safely
-           remove this program from your system: sudo rm /usr/bin/so
-
-  So run ``so login``. Already logged in? If you moved to another account or just deleted your
-  Stack Overflow profile, you need to run ``so logout`` to remove the app from
-  your SEN account.
+   Run ``so login``.
 
 ``so`` or ``so help`` will list commands.
 
