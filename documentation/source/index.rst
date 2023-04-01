@@ -1,8 +1,10 @@
 .. toctree::
+   :hidden:
    :maxdepth: 3
    :caption: Contents:
 
    index
+   usage
 
 Welcome to StackOverflow CLI's documentation!
 =============================================
