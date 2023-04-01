@@ -22,17 +22,22 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         path: ./build/docs
-        name: github-pages
+        name: docs
     - name: Uninstall Sphinx
       run: sudo dpkg --purge python3-sphinx
   deploy:
     runs-on: ubuntu-latest
     concurrency: ci-${{ github.ref }}
     needs: build
-    permissions: write-all
     steps:
       - uses: actions/checkout@v3
-      - name: Deploy GitHub Pages site
-        uses: actions/deploy-pages@v2.0.0
+      - name: Download artifact
+        uses: actions/download-artifact@v3
         with:
-          token: ${{ github.token }}
+           name: docs
+           path: ${{ github.workspace }}/doc-build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: doc-build # The folder the action should deploy.
