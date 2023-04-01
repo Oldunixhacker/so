@@ -6,13 +6,6 @@
 Welcome to StackOverflow CLI's documentation!
 =============================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-   
-   index
-   usage
-
 The Stack Overflow CLI is a free and open-source command-line for StackOverflow.com, a Stack Exchange community.
 
 .. warning ::
@@ -23,8 +16,16 @@ The Stack Overflow CLI is a free and open-source command-line for StackOverflow.
    
    Stack Overflow CLI is licensed under the MIT (Expat) license.
 
-Indices and tables
-==================
+.. grid:: 3
 
-* :ref:`genindex`
-* :ref:`search`
+    .. grid-item-card::  Answer and ask
+
+        If you want to keep coding without leaving your code editor with a terminal, ``so`` is the best program available for the job.
+
+    .. grid-item-card::  Multiplatform
+
+        ``so`` is compatible with popular platforms including Windows, macOS, and Linux.
+    
+    -- grid-item-card::  Open-source
+       
+       ``so`` is available for free and the source code is available on GitHub under thr MIT license.
